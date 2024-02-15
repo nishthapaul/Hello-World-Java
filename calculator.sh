@@ -11,7 +11,7 @@ echo "3. Division:"
 echo "4. Multiplication:"
 #read ch
 
-case $ch in :
+case $ch in
   1)res=`expr$a + $b`
   ;;
   2)res=`expr$a - $b`
