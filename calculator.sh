@@ -1,3 +1,5 @@
+# !/bin/bash
+
 #echo "Enter 2 numbers: "
 a=$1
 b=$2
