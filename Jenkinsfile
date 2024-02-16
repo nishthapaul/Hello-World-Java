@@ -9,7 +9,7 @@ pipeline {
 
           stage ("Clone Git") {
                 steps {
-                    git 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
+                    git clone 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
                 }
           }
 
