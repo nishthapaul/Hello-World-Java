@@ -21,7 +21,7 @@ pipeline {
           stage ("Push docker image") {
                 steps {
                     script {
-                    sh "docker login -u nishthapaul"
+                    sh "docker login -u nishthapaul -p paulpaul19"
                     sh "docker push nishthapaul/hello-world-jenkin-project"
                     }
                 }
