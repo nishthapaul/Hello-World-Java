@@ -7,10 +7,17 @@ pipeline {
                 } 
           }
 
-          stage ("Two") {
+          stage ("Clone Git") {
                 steps {
-                    echo "Hi it is the second step !!!"
-                } 
+                    git 'https://github.com/nishthapaul/Hello-World-Java.git'
+                }
+          }
+
+          stage ("Build Code") {
+                steps {
+                    sh "chmod u+x calculator.sh"
+                    sh "./calculator.sh"
+                }
           }
     }
 }
