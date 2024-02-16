@@ -13,7 +13,7 @@ pipeline {
                 }
           }
 
-          stage ("Build Code") {
+          stage ("Build & Run Code") {
                 steps {
                     sh "chmod u+x calculator.sh"
                     sh "./calculator.sh"
