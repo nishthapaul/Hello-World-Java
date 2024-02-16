@@ -20,8 +20,10 @@ pipeline {
 
           stage ("Push docker image") {
                 steps {
+                    script {
                     sh "docker login -u nishthapaul"
                     sh "docker push nishthapaul/hello-world-jenkin-project"
+                    }
                 }
           }
     }
