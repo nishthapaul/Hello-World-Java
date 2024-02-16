@@ -18,11 +18,11 @@ pipeline {
                 }
           }
 
-          // stage ("Build & Run Code") {
-          //       steps {
-          //           sh "chmod u+x calculator.sh"
-          //           sh "./calculator.sh 1 2 1"
-          //       }
-          // }
+          stage ("Push docker image") {
+                steps {
+                    sh "docker login -u nishthapaul"
+                    sh "docker push nishthapaul/hello-world-jenkin-project"
+                }
+          }
     }
 }
