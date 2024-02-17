@@ -17,5 +17,10 @@
       service:
         name: docker
         state: started
-    - name: Running container
-      shell: docker run -it -d --name hw-container nishthapaul/hello-world-jenkin-project
+    # - name: Running container
+    #   shell: docker run -it -d --name hw-container nishthapaul/hello-world-jenkin-project
+    - name: Create Docker Container
+      docker_container:
+        name: hw-container
+        image: nishthapaul/hello-world-jenkin-project
+        state: started
