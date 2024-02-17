@@ -16,6 +16,7 @@ pipeline {
                     git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
                 }
           }
+        
           stage ("Build & Run Code") {
                 steps {
                     sh 'docker build -t nishthapaul/hello-world-jenkin-project .'
@@ -28,6 +29,12 @@ pipeline {
                     sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_CREDENTIALS'
                     sh 'docker push nishthapaul/hello-world-jenkin-project'
                     }
+                }
+          }
+        
+          stage ("Run Ansible Playbook") {
+                steps {
+                    sh 'ansible-playbook -i inventory deploy.yml'
                 }
           }
     }
