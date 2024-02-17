@@ -38,4 +38,13 @@ pipeline {
                 }
           }
     }
+    post {
+        failure {
+            emailext (
+                to: 'paulnishtha19@gmail.com',
+                subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
+                body: "The Jenkins pipeline ${currentBuild.fullDisplayName} has failed. Please investigate.",
+            )
+        }
+    }
 }
