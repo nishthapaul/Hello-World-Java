@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    emailext attachLog: true, body: 'Body here', subject: 'Pipeline Failure', to: 'paulnishtha19@gmail.com'
+    emailext ( attachLog: true, body: 'Body here', subject: 'Pipeline Failure', to: 'paulnishtha19@gmail.com' )
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
         DOCKERHUB_USERNAME='nishthapaul'
