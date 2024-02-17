@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
         DOCKERHUB_USERNAME='nishthapaul'
-        EMAIL_TO = 'paulnishtha19@gmail.com'
+        EMAIL_TO = 'nishtha.paul@iiitb.ac.in'
     }
     stages {
           stage ("One") {
