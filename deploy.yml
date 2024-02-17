@@ -13,5 +13,8 @@
       debug:
         var: docker_pull_result
 
+    - name: Removing container if already exists
+      shell: docker rm hw-container
+
     - name: Running container
       shell: docker run -it -d --name hw-container nishthapaul/hello-world-jenkin-project
