@@ -13,6 +13,12 @@ pipeline {
                 } 
           }
 
+        stage ("Two") {
+                steps {
+                    echo 'Hi it is the first step !!!'
+                } 
+          }
+
           stage ("Clone Git") {
                 steps {
                     git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
