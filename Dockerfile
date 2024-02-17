@@ -10,5 +10,5 @@ COPY HelloWorld.java .
 # Compile the Java file
 RUN javac HelloWorld.java
 
-# Define the command to run your Java application
-CMD ["java", "HelloWorld"]
+# # Define the command to run your Java application
+# CMD ["java", "HelloWorld"]
