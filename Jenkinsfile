@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+        DOCKERHUB_USERNAME='nishthapaul'
     }
     stages {
           stage ("One") {
@@ -24,7 +25,7 @@ pipeline {
           stage ("Push docker image") {
                 steps {
                     script {
-                    sh 'docker login -u nishthapaul -p $DOCKERHUB_CREDENTIALS'
+                    sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_CREDENTIALS'
                     sh 'docker push nishthapaul/hello-world-jenkin-project'
                     }
                 }
