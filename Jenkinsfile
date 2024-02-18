@@ -18,6 +18,8 @@ pipeline {
                     echo "Environment variables:"
                     echo env.PROJECT_NAME
                     echo env.BUILD_URL
+                    def jenkinsBuildUrl = "http://localhost:8080/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/"
+                    echo "Jenkins Build URL: ${jenkinsBuildUrl}"
                 }
             }
         }
