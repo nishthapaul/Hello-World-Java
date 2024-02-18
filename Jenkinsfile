@@ -14,7 +14,12 @@ pipeline {
 
         stage ("Email Notif") {
             steps {
-                echo env
+                script {
+                    echo "Environment variables:"
+                    env.each { k, v ->
+                        echo "${k}=${v}"
+                    }
+                }
             }
         }
 
