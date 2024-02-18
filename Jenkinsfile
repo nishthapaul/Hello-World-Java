@@ -16,9 +16,8 @@ pipeline {
             steps {
                 script {
                     echo "Environment variables:"
-                    env.each { k, v ->
-                        echo "${k}=${v}"
-                    }
+                    echo env.PROJECT_NAME
+                    echo env.BUILD_URL
                 }
             }
         }
