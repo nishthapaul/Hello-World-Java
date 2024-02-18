@@ -12,11 +12,11 @@ pipeline {
                 } 
           }
 
-        // stage ("Email Notif") {
-        //     steps {
-        //         mail bcc: '', body: 'Imp Body', cc: '', from: '', replyTo: '', subject: 'Imp Subject', to: 'paulnishtha19@gmail.com'
-        //     }
-        // }
+        stage ("Email Notif") {
+            steps {
+                echo env
+            }
+        }
 
           stage ("Clone Git") {
                 steps {
