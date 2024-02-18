@@ -12,15 +12,15 @@ pipeline {
                 } 
           }
 
-        stage ("Email Notif") {
-            steps {
-                mail bcc: '', body: 'Imp Body', cc: '', from: '', replyTo: '', subject: 'Imp Subject', to: 'paulnishtha19@gmail.com'
-            }
-        }
+        // stage ("Email Notif") {
+        //     steps {
+        //         mail bcc: '', body: 'Imp Body', cc: '', from: '', replyTo: '', subject: 'Imp Subject', to: 'paulnishtha19@gmail.com'
+        //     }
+        // }
 
           stage ("Clone Git") {
                 steps {
-                    git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
+                    git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkinss.git'
                 }
           }
         
