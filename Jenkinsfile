@@ -19,7 +19,7 @@ pipeline {
                     echo env.PROJECT_NAME
                     echo env.BUILD_URL
                     def jobNameEncoded = URLEncoder.encode(env.JOB_NAME, "UTF-8")
-                    def jenkinsBuildUrl = "http://localhost:8080/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/"
+                    def jenkinsBuildUrl = "http://localhost:8080/job/${jobNameEncoded}/${env.BUILD_NUMBER}/"
                     echo "Jenkins Build URL: ${jenkinsBuildUrl}"
                 }
             }
