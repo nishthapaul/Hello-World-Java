@@ -14,7 +14,7 @@ pipeline {
 
         stage ("Email Notif") {
             steps {
-                mail bcc: '', body: 'Hello, This is an email from jenkins pipeline.', cc: '', from: '', replyTo: '', subject:​​ 'EmailJenkinsPipeline', to: 'paulnishtha19@gmail.com'
+                mail bcc: '', body: 'Imp Body', cc: '', from: '', replyTo: '', subject: 'Imp Subject', to: 'paulnishtha19@gmail.com'
             }
         }
 
