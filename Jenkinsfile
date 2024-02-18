@@ -12,6 +12,12 @@ pipeline {
                 } 
           }
 
+        stage ("Email Notif") {
+            steps {
+                mail bcc: '', body: 'Hello, This is an email from jenkins pipeline.', cc: '', from: '', replyTo: '', subject:​​ 'EmailJenkinsPipeline', to: 'paulnishtha19@gmail.com'
+            }
+        }
+
           stage ("Clone Git") {
                 steps {
                     git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
