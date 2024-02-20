@@ -8,7 +8,7 @@ echo "Enter Choice:"
 echo "1. Addition:"
 echo "2. Subtraction:"
 echo "3. Division:"
-echo "4. Multiplication:"
+echo "4. Multiplications:"
 #read ch
 
 case $ch in
