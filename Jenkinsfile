@@ -27,7 +27,7 @@ pipeline {
 
           stage ("Clone Git") {
                 steps {
-                    git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkinss.git'
+                    git branch: 'main', url: 'https://github.com/nishthapaul/Hello-World-Jenkins.git'
                 }
           }
         
